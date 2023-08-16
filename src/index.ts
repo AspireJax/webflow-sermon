@@ -1,7 +1,8 @@
-import { greetUser } from '$utils/greet';
+import { runFillIn } from '$utils/fill-in';
+import { runNotesEditor } from '$utils/notes-editor';
 
-window.Webflow ||= [];
+window.Webflow = window.Webflow || [];
 window.Webflow.push(() => {
-  const name = 'John Doe';
-  greetUser(name);
+  runFillIn();
+  runNotesEditor();
 });

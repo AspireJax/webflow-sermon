@@ -1,8 +1,6 @@
-# Finsweet Developer Starter
+# Webflow Sermon Notes
 
-A starter template for both Client & Power projects.
-
-Before starting to work with this template, please take some time to read through the documentation.
+This is a webflow project to make incredible sermon pages in webflow.
 
 ## Reference
 
