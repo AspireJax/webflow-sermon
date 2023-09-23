@@ -7,7 +7,7 @@ const BUILD_DIRECTORY = 'build';
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 // Config entrypoint files
-const ENTRY_POINTS = ['src/index.ts'];
+const ENTRY_POINTS = ['src/index.ts', 'src/bible-picker.ts'];
 
 // Config dev serving
 const LIVE_RELOAD = !PRODUCTION;

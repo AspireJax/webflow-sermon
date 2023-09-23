@@ -69,6 +69,7 @@ export function runFillIn() {
     if (savedValue) {
       inputBox.value = savedValue;
       if (savedValue === targetWord) {
+        inputBox.readOnly = true;
         inputBox.disabled = true;
         inputBox.classList.add('correct');
       }
@@ -91,6 +92,7 @@ export function runFillIn() {
 
     inputBox.addEventListener('keyup', function () {
       if (this.value === targetWord) {
+        this.readOnly = true;
         this.disabled = true;
         this.classList.add('correct');
         this.classList.add('dance');
@@ -100,7 +102,7 @@ export function runFillIn() {
           size: party.variation.range(0.5, 0.9),
           shapes: svgShapes,
         });
-//hell
+
         setTimeout(() => {
           this.classList.remove('dance');
         }, 1000);
