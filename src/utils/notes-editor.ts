@@ -39,8 +39,29 @@ export function runNotesEditor() {
   });
 
   window.addEventListener('storage', function (event) {
-    if (event.key === NotesKey) {
+    if (event.key === NotesKey && editor !== null) {
       editor.innerHTML = event.newValue;
     }
   });
+
+  const blockDropdown = document.querySelector('[rt-input="block-dropdown"]');
+  const blockDropdownbutton = document.querySelector('.ql-dropdown-text');
+
+  if (blockDropdownbutton && blockDropdown) {
+    blockDropdownbutton.addEventListener('click', () => {
+      if (blockDropdown.style.display === 'none' || blockDropdown.style.display === '') {
+        blockDropdown.style.display = 'block'; // Show the dropdown
+      } else {
+        blockDropdown.style.display = 'none'; // Hide the dropdown
+      }
+    });
+
+    const dropdownChildren = blockDropdown.querySelectorAll('.ql-toolbar-dropdown');
+
+    dropdownChildren.forEach((child) => {
+      child.addEventListener('click', () => {
+        blockDropdown.style.display = 'none'; // Hide the blockDropdown
+      });
+    });
+  }
 }
