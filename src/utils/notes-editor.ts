@@ -64,4 +64,7 @@ export function runNotesEditor() {
       });
     });
   }
+  else {
+    console.error('Missing [rt-input="block-dropdown"] and or .ql-dropdown-text');
+  }
 }
